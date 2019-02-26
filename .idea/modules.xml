@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library.iml" filepath="$PROJECT_DIR$/.idea/modules/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-common/library-common.iml" filepath="$PROJECT_DIR$/.idea/modules/library-common/library-common.iml" group="library-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-common/library-common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/library-common/library-common_main.iml" group="library-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-common/library-common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/library-common/library-common_test.iml" group="library-common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-core/library-core.iml" filepath="$PROJECT_DIR$/.idea/modules/library-core/library-core.iml" group="library-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-core/library-core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/library-core/library-core_main.iml" group="library-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-core/library-core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/library-core/library-core_test.iml" group="library-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-web/library-web.iml" filepath="$PROJECT_DIR$/.idea/modules/library-web/library-web.iml" group="library-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-web/library-web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/library-web/library-web_main.iml" group="library-web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library-web/library-web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/library-web/library-web_test.iml" group="library-web" />
+    </modules>
+  </component>
+</project>

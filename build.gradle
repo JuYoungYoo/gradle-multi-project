@@ -1,0 +1,78 @@
+buildscript{
+    ext {
+        springBootVersion = '2.1.3.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies{
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE"
+    }
+}
+
+ext {
+    group = 'com.juyoung.library'
+    version = '0.0.1-'+new Date().format("yyyyMMddHHmmss")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10.2'
+}
+
+// allprojects{}  // 부모까지 모든 프로젝트에 적용
+subprojects{
+    // 사용 하고자 하는 gradle의 plugin을 선언 합니다.
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management' // 필수
+
+    group = "${group}"
+    version = "${version}"
+
+    // JDK Version
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories{
+        mavenCentral()
+        jcenter()
+    }
+
+     // 해당 프로젝트 필드 시 각각 하위모듈 자동생성
+     task initSourceFolders {
+         sourceSets*.java.srcDirs*.each {
+             if( !it.exists() ) {
+                 it.mkdirs()
+             }
+         }
+
+         sourceSets*.resources.srcDirs*.each {
+             if( !it.exists() ) {
+                 it.mkdirs()
+             }
+         }
+     }
+
+    dependencies{
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        compile('org.projectlombok:lombok')
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
+}
+
+
+project(':library-core'){
+    dependencies{
+        compile project(':library-common')  // library-common module 서브 프로젝트 의존
+    }
+}
+
+project(':library-web'){
+    dependencies{
+        compile project(':library-common')
+        compile project(':library-core')
+    }
+}

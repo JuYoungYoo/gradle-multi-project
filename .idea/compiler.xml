@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-module_main" target="1.8" />
+      <module name="api-module_test" target="1.8" />
+      <module name="juyoung-library_main" target="1.8" />
+      <module name="juyoung-library_test" target="1.8" />
+      <module name="library-common_main" target="1.8" />
+      <module name="library-common_test" target="1.8" />
+      <module name="library-core_main" target="1.8" />
+      <module name="library-core_test" target="1.8" />
+      <module name="library-web_main" target="1.8" />
+      <module name="library-web_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
