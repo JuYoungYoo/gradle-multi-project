@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.99.100:3306/test
+    username: root
+    password: test
+  jpa:
+    hibernate:
+      ddl-auto: update  # 운영시에는 validate
+    show-sql: true
+    #########################################################################################
+    # spring.jpa.hibernate.ddl-auto                                                         #
+    #   sessionFactory가 올라갈 때, DBMS의 스키마를 자동으로 수정하거나 검증하는 설정 값          #
+    #   type : none, create, create-drop, update, validate                                  #
+
+    # spring.jpa.show-sql : console에 JPA 실행 SQL Log 유무 (true, false)                    #
+    #########################################################################################
